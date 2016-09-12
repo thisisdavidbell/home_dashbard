@@ -3,14 +3,23 @@
 // ----------------------------------------------------------------------------
 $background-color:  #4b4b4b;
 
+$cameratitle-color: darkslategrey;
 // ----------------------------------------------------------------------------
 // Widget-image styles
 // ----------------------------------------------------------------------------
 div.widget-big-image {
     padding: 0;
+    margin: 0;
+    vertical-align: top;
     background-color: $background-color;
+    height: 480px;
 
     video {
         width: 100%
     }
+
+    .cameratitle {
+        background-color: $cameratitle-color;
+    }
 }
+
