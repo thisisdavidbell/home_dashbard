@@ -1,18 +1,18 @@
 ---
 buzzwords: |+
-  data: {"items":[{"label":"Web 2.0","value":29},{"label":"Enterprise","value":10},{"label":"Leverage","value":0},{"label":"Exit strategy","value":17},{"label":"Turn-key","value":20},{"label":"Paradigm shift","value":22},{"label":"Streamlininess","value":3},{"label":"Pivoting","value":16},{"label":"Synergy","value":25}],"id":"buzzwords","updatedAt":1473669478}
+  data: {"items":[{"label":"Turn-key","value":2},{"label":"Exit strategy","value":17},{"label":"Enterprise","value":9},{"label":"Leverage","value":6},{"label":"Streamlininess","value":1},{"label":"Paradigm shift","value":14},{"label":"Synergy","value":9},{"label":"Pivoting","value":3},{"label":"Web 2.0","value":12}],"id":"buzzwords","updatedAt":1473694383}
 
 convergence: |+
-  data: {"points":[{"x":111533,"y":22},{"x":111534,"y":23},{"x":111535,"y":48},{"x":111536,"y":13},{"x":111537,"y":43},{"x":111538,"y":14},{"x":111539,"y":18},{"x":111540,"y":31},{"x":111541,"y":49},{"x":111542,"y":25}],"id":"convergence","updatedAt":1473669478}
+  data: {"points":[{"x":4784,"y":16},{"x":4785,"y":3},{"x":4786,"y":37},{"x":4787,"y":46},{"x":4788,"y":28},{"x":4789,"y":15},{"x":4790,"y":19},{"x":4791,"y":32},{"x":4792,"y":1},{"x":4793,"y":3}],"id":"convergence","updatedAt":1473694383}
 
 valuation: |+
-  data: {"current":76,"last":48,"id":"valuation","updatedAt":1473669478}
+  data: {"current":5,"last":28,"id":"valuation","updatedAt":1473694383}
 
 karma: |+
-  data: {"current":105803,"last":91618,"id":"karma","updatedAt":1473669478}
+  data: {"current":83863,"last":44497,"id":"karma","updatedAt":1473694383}
 
 synergy: |+
-  data: {"value":12,"id":"synergy","updatedAt":1473669478}
+  data: {"value":59,"id":"synergy","updatedAt":1473694383}
 
 sss-gateway: |+
   data: {"result":0,"id":"sss-gateway","updatedAt":1473435612}
@@ -27,23 +27,23 @@ sss-brokenserver: |+
   data: {"result":0,"id":"sss-brokenserver","updatedAt":1473435581}
 
 sss-livingroomcamera: |+
-  data: {"result":0,"id":"sss-livingroomcamera","updatedAt":1473669474}
+  data: {"result":1,"id":"sss-livingroomcamera","updatedAt":1473694375}
 
 sss-frontdoorcamera: |+
-  data: {"result":0,"id":"sss-frontdoorcamera","updatedAt":1473669454}
+  data: {"result":1,"id":"sss-frontdoorcamera","updatedAt":1473694366}
 
 sss-cinemaroommac: |+
-  data: {"result":0,"id":"sss-cinemaroommac","updatedAt":1473669479}
+  data: {"result":1,"id":"sss-cinemaroommac","updatedAt":1473694383}
 
 verbinski: |+
   data: {"current":{"temperature":19,"summary":"Partly Cloudy","humidity":"78&#37;","wind_speed":20,"wind_bearing":206,"icon":"partly-cloudy-day"},"today":{"summary":"Rain starting tomorrow morning, continuing until tomorrow afternoon.","high":20,"low":14,"sunrise":"6:33 am","sunset":"7:34 pm","icon":"partly-cloudy-day"},"upcoming_week":[{"max_temp":19,"min_temp":13,"time":"Sat","icon":"rain"},{"max_temp":19,"min_temp":10,"time":"Sun","icon":"partly-cloudy-day"},{"max_temp":24,"min_temp":15,"time":"Mon","icon":"clear-day"},{"max_temp":26,"min_temp":17,"time":"Tue","icon":"partly-cloudy-night"},{"max_temp":24,"min_temp":14,"time":"Wed","icon":"rain"},{"max_temp":20,"min_temp":13,"time":"Thu","icon":"rain"},{"max_temp":20,"min_temp":12,"time":"Fri","icon":"rain"}],"id":"verbinski","updatedAt":1473443577}
 
 camera1: |+
-  data: {"image":"/cameras/snapshot1_new.jpeg","id":"camera1","updatedAt":1473667447}
+  data: {"image":"/cameras/snapshot1_new.jpeg","id":"camera1","updatedAt":1473694383}
 
 welcome: |+
   data: {"title":"Hey, Title!","id":"welcome","updatedAt":1473443825}
 
 picture: |+
-  data: {"image":"http://192.168.1.93:81/live/0/mjpeg.jpg","id":"picture","updatedAt":1473669434}
+  data: {"image":"http://192.168.1.93:81/live/0/mjpeg.jpg","id":"picture","updatedAt":1473694357}
 

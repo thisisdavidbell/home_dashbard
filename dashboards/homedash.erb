@@ -1,24 +1,35 @@
+<script type='text/javascript'>
+$(function() {
+  Dashing.widget_base_dimensions = [130, 30]
+  Dashing.numColumns = 12
+});
+</script>
+
 <% content_for :title do %>Home Status Dashboard<% end %>
 <div class="gridster">
   <ul>
-
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="welcome" data-view="Text" data-title="Home Dashboard" data-text="View current status of the house" data-moreinfo="Note: Yes, I know this is super cool!"></div>
+<!-- Home Dashboard Title -->
+    <li data-row="1" data-col="1" data-sizex="6" data-sizey="1">
+      <div data-id="home-title" data-view="Header" data-header="Home Dashboard" class="home-title"></div>
     </li>
-    <li data-row="2" data-col="1" data-sizex="4" data-sizey="2">
+<!-- FRont Door Camera title -->
+    <li data-row="2" data-col="1" data-sizex="6" data-sizey="1">
+      <div data-id="front-door-camera" data-view="Header" data-header="Front Door Camera" class="home-header"></div>
+    </li>
+    <li data-row="3" data-col="1" data-sizex="6" data-sizey="6">
         <div data-id="picture" data-view="BigImage" data-image="http://192.168.1.93:81/live/0/mjpeg.jpg" 
         style="background-color:transparent;" data-max="true"></div>
     </li>
-    <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
+    <li data-row="10" data-col="1" data-sizex="2" data-sizey="6">
         <div data-id="sss-frontdoorcamera" data-view="ServerStatusSquares" data-title="Front Door Camera"></div>
     </li>
-    <li data-row="3" data-col="2" data-sizex="1" data-sizey="1">
+    <li data-row="10" data-col="3" data-sizex="2" data-sizey="6">
         <div data-id="sss-livingroomcamera" data-view="ServerStatusSquares" data-title="Living Room Camera"></div>
     </li>
-    <li data-row="3" data-col="3" data-sizex="1" data-sizey="1">
+    <li data-row="10" data-col="5" data-sizex="2" data-sizey="6">
         <div data-id="sss-cinemaroommac" data-view="ServerStatusSquares" data-title="Cinema Room Mac"></div>
     </li>
-    <li data-row="4" data-col="1" data-sizex="3" data-sizey="1">
+    <li data-row="16" data-col="1" data-sizex="6" data-sizey="9">
       <div data-id="verbinski" data-view="Verbinski"></div>
     </li>    
 
