@@ -1,18 +1,18 @@
 ---
 buzzwords: |+
-  data: {"items":[{"label":"Paradigm shift","value":4},{"label":"Turn-key","value":6},{"label":"Synergy","value":4},{"label":"Leverage","value":3},{"label":"Exit strategy","value":1},{"label":"Enterprise","value":3},{"label":"Web 2.0","value":1}],"id":"buzzwords","updatedAt":1473774389}
+  data: {"items":[{"label":"Streamlininess","value":16},{"label":"Turn-key","value":11},{"label":"Paradigm shift","value":10},{"label":"Leverage","value":11},{"label":"Enterprise","value":11},{"label":"Synergy","value":6},{"label":"Pivoting","value":15},{"label":"Exit strategy","value":9},{"label":"Web 2.0","value":17}],"id":"buzzwords","updatedAt":1473788162}
 
 convergence: |+
-  data: {"points":[{"x":23,"y":5},{"x":24,"y":39},{"x":25,"y":15},{"x":26,"y":8},{"x":27,"y":28},{"x":28,"y":31},{"x":29,"y":3},{"x":30,"y":39},{"x":31,"y":27},{"x":32,"y":37}],"id":"convergence","updatedAt":1473774389}
+  data: {"points":[{"x":107,"y":28},{"x":108,"y":20},{"x":109,"y":42},{"x":110,"y":13},{"x":111,"y":6},{"x":112,"y":46},{"x":113,"y":28},{"x":114,"y":21},{"x":115,"y":26},{"x":116,"y":24}],"id":"convergence","updatedAt":1473788162}
 
 valuation: |+
-  data: {"current":39,"last":12,"id":"valuation","updatedAt":1473774389}
+  data: {"current":51,"last":10,"id":"valuation","updatedAt":1473788162}
 
 karma: |+
-  data: {"current":75896,"last":162639,"id":"karma","updatedAt":1473774389}
+  data: {"current":42211,"last":25688,"id":"karma","updatedAt":1473788162}
 
 synergy: |+
-  data: {"value":89,"id":"synergy","updatedAt":1473774389}
+  data: {"value":83,"id":"synergy","updatedAt":1473788162}
 
 sss-gateway: |+
   data: {"result":0,"id":"sss-gateway","updatedAt":1473435612}
@@ -27,19 +27,19 @@ sss-brokenserver: |+
   data: {"result":0,"id":"sss-brokenserver","updatedAt":1473435581}
 
 sss-livingroomcamera: |+
-  data: {"result":0,"id":"sss-livingroomcamera","updatedAt":1473774385}
+  data: {"result":1,"id":"sss-livingroomcamera","updatedAt":1473788148}
 
 sss-frontdoorcamera: |+
-  data: {"result":0,"id":"sss-frontdoorcamera","updatedAt":1473774365}
+  data: {"result":1,"id":"sss-frontdoorcamera","updatedAt":1473788139}
 
 sss-cinemaroommac: |+
-  data: {"result":0,"id":"sss-cinemaroommac","updatedAt":1473774390}
+  data: {"result":1,"id":"sss-cinemaroommac","updatedAt":1473788157}
 
 verbinski: |+
   data: {"current":{"temperature":19,"summary":"Partly Cloudy","humidity":"78&#37;","wind_speed":20,"wind_bearing":206,"icon":"partly-cloudy-day"},"today":{"summary":"Rain starting tomorrow morning, continuing until tomorrow afternoon.","high":20,"low":14,"sunrise":"6:33 am","sunset":"7:34 pm","icon":"partly-cloudy-day"},"upcoming_week":[{"max_temp":19,"min_temp":13,"time":"Sat","icon":"rain"},{"max_temp":19,"min_temp":10,"time":"Sun","icon":"partly-cloudy-day"},{"max_temp":24,"min_temp":15,"time":"Mon","icon":"clear-day"},{"max_temp":26,"min_temp":17,"time":"Tue","icon":"partly-cloudy-night"},{"max_temp":24,"min_temp":14,"time":"Wed","icon":"rain"},{"max_temp":20,"min_temp":13,"time":"Thu","icon":"rain"},{"max_temp":20,"min_temp":12,"time":"Fri","icon":"rain"}],"id":"verbinski","updatedAt":1473443577}
 
 camera1: |+
-  data: {"image":"/cameras/snapshot1_new.jpeg","id":"camera1","updatedAt":1473754682}
+  data: {"image":"/cameras/snapshot1_new.jpeg","id":"camera1","updatedAt":1473788161}
 
 welcome: |+
   data: {"title":"Hey, Look what I can do!","id":"welcome","updatedAt":1473702923}
@@ -57,11 +57,20 @@ server_status: |+
   data: {"items":[{"label":"vmwtpm093r Dashing","value":0,"arrow":"icon-warning-sign","color":"red"},{"label":"Bluemix Dashing","value":0,"arrow":"icon-warning-sign","color":"red"},{"label":"Jazz802","value":1,"arrow":"icon-ok-sign","color":"green"},{"label":"vhost04","value":0,"arrow":"icon-warning-sign","color":"red"}],"id":"server_status","updatedAt":1473770725}
 
 device-status: |+
-  data: {"servers":[{"simple_name":"Front Door Camera","up":0},{"simple_name":"Living Room Camera","up":0},{"simple_name":"Ethernet Over Power","up":0}],"id":"device-status","updatedAt":1473774390}
+  data: {"servers":[{"simple_name":"Front Door Camera","up":true},{"simple_name":"Living Room Camera","up":true},{"simple_name":"Ethernet Over Power","up":true}],"id":"device-status","updatedAt":1473788157}
 
 Front Dor Camera: |+
   data: {"result":0,"id":"Front Dor Camera","updatedAt":1473771922}
 
 Living Room Camera: |+
   data: {"result":0,"id":"Living Room Camera","updatedAt":1473771898}
+
+whoishome-status: |+
+  data: {"servers":[{"simple_name":"David","up":0},{"simple_name":"Chrissie","up":0}],"id":"whoishome-status","updatedAt":1473774868}
+
+whoishome: |+
+  data: {"servers":[{"simple_name":"David","up":1},{"simple_name":"Chrissie","up":1}],"id":"whoishome","updatedAt":1473788133}
+
+tomtom: |+
+  data: {"results":[{"name":"Hursley (back route)","time":"26 mins","road":"","distance":10.4,"red":true},{"name":"Hursley (motorway)","time":"24 mins","road":"","distance":13.8,"red":true},{"name":"Harefield Primary","time":"37 mins","road":"","distance":18.9,"red":true},{"name":"Gatcombe Gardens","time":"34 mins","road":"","distance":13.1,"red":true}],"id":"tomtom","updatedAt":1473788146}
 

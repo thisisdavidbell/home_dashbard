@@ -9,7 +9,7 @@ require 'uri'
 # ping_count => Number of pings to perform for the ping method
 #
 httptimeout = 60
-ping_count = 10
+ping_count = 2 #10
 
 # 
 # Check whether a server is Responding you can set a server to 
@@ -29,9 +29,8 @@ ping_count = 10
 #      the check will return false
 #
 servers = [
-    {name: 'sss-frontdoorcamera', label: 'Front Door Camera', url: '192.168.1.93', method: 'ping'},
-    {name: 'sss-livingroomcamera', label: 'Living Room Camera', url: '192.168.1.94', method: 'ping'},
-    {name: 'sss-cinemaroommac', label: 'Ethernet Over Power', url: '192.168.1.80', method: 'ping'},
+    {name: 'david', label: 'David', url: '192.168.1.67', method: 'ping'},
+    {name: 'chrissie', label: 'Chrissie', url: '192.168.1.65', method: 'ping'},
 ]
  
 SCHEDULER.every '1m', :first_in => 0 do |job|
@@ -74,10 +73,6 @@ SCHEDULER.every '1m', :first_in => 0 do |job|
         end
 
         thedata.push({ simple_name: server[:label], up: result })
-
-        send_event(server[:name], result: result)
-#        send_event('device-status', servers: [ { simple_name: "FROMsquares_rb2", up: 0 }, { simple_name: "DRB1", up: 1 } ])
-#        send_event('device-status', servers: [ { simple_name: server[:name], up: result } ])
     end
-    send_event('device-status', servers: thedata)
+    send_event('whoishome', servers: thedata)
 end

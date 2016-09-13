@@ -11,8 +11,10 @@
 
 <ul>
 	<li data-foreach-result="results">
+          <div data-addclass-green="green" data-addclass-red="red">
 		<span data-bind="result.name"></span>: <span class="drive-time" data-bind="result.time"></span> (<span class="drive-distance" data-bind="result.distance"></span>m)
 		<span class="drive-road" data-bind="result.road"></span>
+          </div>
 	</li>
 </ul>
 
