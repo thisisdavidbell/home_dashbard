@@ -1,0 +1,13 @@
+<h1 class="title" data-bind="title"></h1>
+
+<ul class="servers_ul">
+    <li data-foreach-server="servers">
+        <div class="server-div" data-addclass-up="server.up" data-addclass-down="server.up | not">
+            <span class="name" data-bind="server.simple_name"></span>
+        </div>
+    </li>
+</ul>
+
+<span class="name" data-addclass-gotdata="servers" data-addclass-emptydata="servers.length | equals 0">No data</span>
+
+<p class="updated-at" data-bind="updatedAtMessage"></p>

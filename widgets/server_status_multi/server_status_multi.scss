@@ -1,0 +1,55 @@
+.widget-server-status-multi {
+    
+    background-color: #266679;
+    
+    .title {
+        font-size: 1.2em;
+        top: 12px;
+        left: 0;
+        right: 0;
+        position: absolute;
+    }
+
+    .updated-at {
+        color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .server-div {
+        padding-top: 2%;
+        padding-bottom: 2%;
+        margin-top: 4%;
+        margin-bottom: 1%;
+    }
+    
+    .name {
+        font-size: 120%;
+        font-weight: bold;
+    }
+    
+    .up {
+        background-color: #96BF48;
+    }
+    
+    .down {
+        background-color: #BF4848;
+    }
+    
+    .gotdata {
+        display: none;
+    }
+    
+    .emptydata {
+        content: "Empty data";
+        display: inline-block;
+        background-color: #FF0000;
+    }
+
+    .emptydata:after {
+        content: " (Empty array received)";
+    }
+    
+}
+
+.widget-server-status-multi.stale {
+    opacity: 0.4;
+}

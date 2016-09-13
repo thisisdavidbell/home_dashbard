@@ -9,30 +9,39 @@ $(function() {
 <div class="gridster">
   <ul>
 <!-- Home Dashboard Title -->
-    <li data-row="1" data-col="1" data-sizex="6" data-sizey="1">
-      <div data-id="home-title" data-view="Header" data-header="Home Dashboard" class="home-title"></div>
+    <li data-row="1" data-col="1" data-sizex="6" data-sizey="2">
+      <div data-id="pagetitle" data-view="Banner" data-title="The Bell Home Dashboard" data-date="Monday 12th September 2016"></div>
     </li>
-<!-- FRont Door Camera title -->
-    <li data-row="2" data-col="1" data-sizex="6" data-sizey="1">
-      <div data-id="front-door-camera" data-view="Header" data-header="Front Door Camera" class="home-header"></div>
+<!--    <li data-row="3" data-col="1" data-sizex="6" data-sizey="1">
+        <div data-id="pagedate" data-view="Header" data-header="IM THE HEADER"></div>
     </li>
-    <li data-row="3" data-col="1" data-sizex="6" data-sizey="16">
-        <div data-id="picture" data-view="BigImage" data-image="http://192.168.1.93:81/live/0/mjpeg.jpg" 
-        style="background-color:transparent;" data-max="false"></div>
+-->    
+<!--    <li data-row="3" data-col="1" data-sizex="6" data-sizey="13">
+    <div>Front Door Camera</div>
+    <img src="http://192.168.1.93:81/live/0/mjpeg.jpg" style="height: 480px;">
     </li>
-    <li data-row="19" data-col="1" data-sizex="2" data-sizey="6">
+-->
+
+    <li data-row="3" data-col="1" data-sizex="6" data-sizey="13">
+      <div data-id="image" data-view="Image" data-title="My Sweet Image" data-src="http://192.168.1.93:81/live/0/mjpeg.jpg"></div>
+    </li>
+
+
+    <li data-row="17" data-col="1" data-sizex="2" data-sizey="8">
+      <div data-id="device-status" data-view="ServerStatusMulti" data-title="Device Status" data-stale="9000" class="pointer"></div>
+    </li>
+    <li data-row="16" data-col="1" data-sizex="2" data-sizey="6">
         <div data-id="sss-frontdoorcamera" data-view="ServerStatusSquares" data-title="Front Door Camera"></div>
     </li>
-    <li data-row="19" data-col="3" data-sizex="2" data-sizey="6">
+    <li data-row="16" data-col="3" data-sizex="2" data-sizey="6">
         <div data-id="sss-livingroomcamera" data-view="ServerStatusSquares" data-title="Living Room Camera"></div>
     </li>
-    <li data-row="19" data-col="5" data-sizex="2" data-sizey="6">
+    <li data-row="16" data-col="5" data-sizex="2" data-sizey="6">
         <div data-id="sss-cinemaroommac" data-view="ServerStatusSquares" data-title="Cinema Room Mac"></div>
     </li>
-    <li data-row="25" data-col="1" data-sizex="6" data-sizey="9">
+    <li data-row="30" data-col="1" data-sizex="6" data-sizey="9">
       <div data-id="verbinski" data-view="Verbinski"></div>
     </li>    
-
  <!--
     <li data-row="4" data-col="1" data-sizex="1" data-sizey="1">
       <div data-id="synergy" data-view="Meter" data-title="Synergy" data-height="200" data-width="200" data-min="0" data-max="100" data-suffix="%"></div>

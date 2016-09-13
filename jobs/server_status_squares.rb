@@ -29,12 +29,13 @@ ping_count = 10
 #      the check will return false
 #
 servers = [
-    {name: 'sss-frontdoorcamera', url: '192.168.1.93', method: 'ping'},
-    {name: 'sss-livingroomcamera', url: '192.168.1.94', method: 'ping'},
-    {name: 'sss-cinemaroommac', url: '192.168.1.80', method: 'ping'},
+    {name: 'sss-frontdoorcamera', label: 'Front Door Camera', url: '192.168.1.93', method: 'ping'},
+    {name: 'sss-livingroomcamera', label: 'Living Room Camera', url: '192.168.1.94', method: 'ping'},
+    {name: 'sss-cinemaroommac', label: 'Ethernet Over Power', url: '192.168.1.80', method: 'ping'},
 ]
  
 SCHEDULER.every '1m', :first_in => 0 do |job|
+    thedata = []
     servers.each do |server|
         if server[:method] == 'http'
             begin
@@ -72,6 +73,11 @@ SCHEDULER.every '1m', :first_in => 0 do |job|
             end
         end
 
+        thedata.push({ simple_name: server[:label], up: result })
+
         send_event(server[:name], result: result)
+#        send_event('device-status', servers: [ { simple_name: "FROMsquares_rb2", up: 0 }, { simple_name: "DRB1", up: 1 } ])
+#        send_event('device-status', servers: [ { simple_name: server[:name], up: result } ])
+         send_event('device-status', servers: thedata)
     end
 end
