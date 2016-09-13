@@ -1,1 +1,5 @@
-<img data-bind-src="image | prepend '/assets'" data-bind-width="width"/>
+<img data-bind-src="image" data-bind-width="width"/>
+<!-- fixed - dont need asset auto adding in, plus breaks external link to image. -->
+
+<!-- <img data-bind-src="image | prepend '/assets'" data-bind-width="width"/> -->
+<!-- if i understand correctly, | means 'and also do' and we are binding the actual div field src to be whatever is passed into image, so out our data-image in the html gets converedt to be a src field' -->

@@ -7,10 +7,10 @@ office_location = URI::encode('50.929588,-1.303068')
 key             = URI::encode('ewtq388cxgnu8uqfgbkabxks')
 locations       = []
 #locations << { name: "Sam2", location: URI::encode('-25.764803,28.34625') } # example location format
-locations << { name: "Hursley (back route)", via: URI::encode('50.993645,-1.328241'), location: URI::encode('51.021931,-1.394223') }
-locations << { name: "Hursley (motorway)", via: URI::encode('50.983058,-1.365861'), location: URI::encode('51.021931,-1.394223') }
-locations << { name: "Harefield Primary", via: URI::encode('50.993645,-1.328241'), location: URI::encode('50.920739,-1.346909') }
-locations << { name: "Gatcombe Gardens", via: URI::encode('50.993645,-1.328241'), location: URI::encode('50.929479,-1.354186') }
+#locations << { name: "IBM (back route)", via: URI::encode('50.993645,-1.328241'), location: URI::encode('51.021931,-1.394223') }
+locations << { name: "IBM (motorway)", via: URI::encode('50.983058,-1.365861'), location: URI::encode('51.021931,-1.394223') }
+#locations << { name: "Harefield Primary", via: URI::encode('50.914903,-1.333551'), location: URI::encode('50.920739,-1.346909') }
+#locations << { name: "Gatcombe Gardens", via: URI::encode('50.927199,-1.326009'), location: URI::encode('50.929479,-1.354186') }
 
 SCHEDULER.every '1m', :first_in => '15s' do |job|
     routes = []

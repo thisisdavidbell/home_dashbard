@@ -1,18 +1,18 @@
-<div class="non-semantic-protector"> 
+<!-- <div class="non-semantic-protector"> -->
    <!-- ribbons and other content in here -->
-	<h1 class="ribbon">
-	  <strong class="ribbon-content">
-	   	<h1 class="title" data-bind="title"></h1>
-	 	</strong>
-	</h1>
-</div>
+<!--	<h1 class="ribbon"> -->
+<!--	  <strong class="ribbon-content"> -->
+                <h1 class="title" data-bind="title"></h1>
+<!--	 	</strong> -->
+<!--	</h1> -->
+<!-- </div> -->
 
 <br />
 
 <ul>
 	<li data-foreach-result="results">
           <div data-addclass-green="green" data-addclass-red="red">
-		<span data-bind="result.name"></span>: <span class="drive-time" data-bind="result.time"></span> (<span class="drive-distance" data-bind="result.distance"></span>m)
+		<span class="drive-destination" data-bind="result.name"></span>: <span class="drive-time" data-bind="result.time"></span> <!--(<span class="drive-distance" data-bind="result.distance"></span>m) -->
 		<span class="drive-road" data-bind="result.road"></span>
           </div>
 	</li>

@@ -4,9 +4,18 @@
 .widget-traffic {
 //  background-color: #ec663c; 
 background-color: #266679;
+
+    .title {
+        font-size: 1.2em;
+        top: 12px;
+        left: 0;
+        right: 0;
+        position: absolute;
+    }
 }
-  .widget-traffic .title {
-    color: rgba(255, 255, 255, 0.7); }
+
+//  .widget-traffic .title {
+//    color: rgba(255, 255, 255, 0.7); }
   .widget-traffic .ribbon {
     font-size: 16px !important;
     /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
@@ -65,6 +74,9 @@ background-color: #266679;
     font-size: 18px; }
   .widget-traffic .drive-time {
     color: rgba(255, 255, 255, 0.7); }
+  .drive-destination, .drive-time, .drive-distance {
+    font-size: 18px;
+  }
   .widget-traffic .drive-road {
     position: relative;
     left: 35px;
@@ -92,5 +104,5 @@ background-color: #266679;
  }
 
 
-.widget.widget-traffic {
-  vertical-align: top; }
+//.widget.widget-traffic {
+//  vertical-align: top; }
