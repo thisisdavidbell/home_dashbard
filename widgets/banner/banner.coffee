@@ -1,16 +1,16 @@
 class Dashing.Banner extends Dashing.Widget
   ready: ->
-    setInterval(@startTime, 500)
+    setInterval(@startTime, 1000)
 
   startTime: =>
     today = new Date()
 
     h = today.getHours()
     m = today.getMinutes()
-    s = today.getSeconds()
+#    s = today.getSeconds()
     m = @formatTime(m)
     s = @formatTime(s)
-    @set('time', h + ":" + m + ":" + s)
+    @set('time', h + ":" + m)
     @set('date', today.toDateString())
 
   formatTime: (i) ->
