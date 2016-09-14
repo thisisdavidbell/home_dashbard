@@ -7,10 +7,10 @@ office_location = URI::encode('50.929588,-1.303068')
 key             = URI::encode('ewtq388cxgnu8uqfgbkabxks')
 locations       = []
 #locations << { name: "Sam2", location: URI::encode('-25.764803,28.34625') } # example location format
-locations << { name: "IBM (back route)", via: URI::encode('50.993645,-1.328241'), location: URI::encode('51.021931,-1.394223') }
-locations << { name: "IBM (motorway)", via: URI::encode('50.983058,-1.365861'), location: URI::encode('51.021931,-1.394223') }
-locations << { name: "Harefield Primary", via: URI::encode('50.914903,-1.333551'), location: URI::encode('50.920739,-1.346909') }
-locations << { name: "Gatcombe Gardens", via: URI::encode('50.927199,-1.326009'), location: URI::encode('50.929479,-1.354186') }
+locations << { name: "IBM (back route)", targettime: "26", via: URI::encode('50.993645,-1.328241'), location: URI::encode('51.021931,-1.394223') }
+locations << { name: "IBM (motorway)", targettime: "25", via: URI::encode('50.983058,-1.365861'), location: URI::encode('51.021931,-1.394223') }
+locations << { name: "Harefield Primary", targettime: "15", via: URI::encode('50.914903,-1.333551'), location: URI::encode('50.920739,-1.346909') }
+locations << { name: "Gatcombe Gardens", targettime: "14", via: URI::encode('50.927199,-1.326009'), location: URI::encode('50.929479,-1.354186') }
 
 SCHEDULER.every '10m', :first_in => '15s' do |job|
     routes = []
@@ -24,7 +24,7 @@ SCHEDULER.every '10m', :first_in => '15s' do |job|
 
         request = Net::HTTP::Get.new(uri.request_uri)
         response = http.request(request)
-        routes << { name: location[:name], location: location[:location], route: JSON.parse(response.body)["routes"][0] }
+        routes << { name: location[:name], location: location[:location], targettime: location[:targettime], route: JSON.parse(response.body)["routes"][0] }
     end
 
     # find winner
@@ -36,7 +36,10 @@ SCHEDULER.every '10m', :first_in => '15s' do |job|
                 time: seconds_in_words(r[:route]["summary"]["travelTimeInSeconds"].to_i),
                 road: delay(r[:route]["summary"]["trafficDelayInSeconds"]),
                 distance: meters_to_miles(r[:route]["summary"]["lengthInMeters"].to_i),
-                red: true}
+                red: r[:targettime].to_i*60 < r[:route]["summary"]["travelTimeInSeconds"].to_i,
+                amber: (r[:targettime].to_i*60) == r[:route]["summary"]["travelTimeInSeconds"].to_i,
+                green: (r[:targettime].to_i*60) > r[:route]["summary"]["travelTimeInSeconds"].to_i 
+            }
         end
     end
 

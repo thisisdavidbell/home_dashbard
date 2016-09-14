@@ -12,6 +12,25 @@ background-color: #266679;
         right: 0;
         position: absolute;
     }
+
+    .route-div {
+        padding-top: 2%;
+        padding-bottom: 2%;
+        margin-top: 4%;
+        margin-bottom: 1%;
+    }
+
+     .red {
+        background-color: #BF4848;
+     }
+
+     .amber {
+       background-color: #ff9933;
+     }
+
+    .green {
+       background-color: #96BF48;
+    }
 }
 
 //  .widget-traffic .title {
@@ -61,9 +80,10 @@ background-color: #266679;
   .widget-traffic .non-semantic-protector {
     position: relative;
     z-index: 1; }
-  .widget-traffic ol, .widget-traffic ul {
-    margin: 0 15px;
-    text-align: left; }
+// wanted full width, centered
+//  .widget-traffic ol, .widget-traffic ul {
+//    margin: 0 15px;
+//    text-align: left; }
   .widget-traffic ol {
     list-style-position: inside; }
   .widget-traffic li:first-child {
@@ -71,11 +91,11 @@ background-color: #266679;
    }
   .widget-traffic li {
     margin-bottom: 12px;
-    font-size: 18px; }
+    font-size: 20px; }
   .widget-traffic .drive-time {
     color: rgba(255, 255, 255, 0.7); }
   .drive-destination, .drive-time, .drive-distance {
-    font-size: 18px;
+    font-size: 16px;
   }
   .widget-traffic .drive-road {
     position: relative;
@@ -91,17 +111,7 @@ background-color: #266679;
  // background-color: #b91be0; 
  }
 
- .red {
-   background-color: red;
- }
 
- .orange {
-   background-color: orange;
- }
-
-  .green {
-   background-color: green;
- }
 
 
 //.widget.widget-traffic {

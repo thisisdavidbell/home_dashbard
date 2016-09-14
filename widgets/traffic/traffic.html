@@ -9,9 +9,9 @@
 
 <br />
 
-<ul>
+<ul class="routes_ul">
 	<li data-foreach-result="results">
-          <div data-addclass-green="green" data-addclass-red="red">
+          <div class="route-div" data-addclass-green="result.green" data-addclass-amber="result.amber" data-addclass-red="result.red">
 		<span class="drive-destination" data-bind="result.name"></span>: <span class="drive-time" data-bind="result.time"></span> <!--(<span class="drive-distance" data-bind="result.distance"></span>m) -->
 		<span class="drive-road" data-bind="result.road"></span>
           </div>
