@@ -14,5 +14,13 @@ $background-color:  #4b4b4b;
     height: 30px;
   //  background-color: #266679;
     background-color: slategray;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .cameraimage {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 469px;
   }
 }

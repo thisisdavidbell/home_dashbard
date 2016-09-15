@@ -1,9 +1,16 @@
 class Dashing.Image extends Dashing.Widget
 
   ready: ->
-    # This is fired when the widget is done being rendered
+# This is fired when the widget is done being rendered
+    setInterval(@startTime, 10000)
 
-  onData: (data) ->
-    # Handle incoming data
-    # You can access the html node of this widget with `@node`
-    # Example: $(@node).fadeOut().fadeIn() will make the node flash each time data comes in.
+  startTime: =>
+ #   @set('image', "http://sawadacoffee.com/wp-content/uploads/Sawada-Coffee-10DEC2015-003.jpg")
+    @set('image', "http://192.168.1.93:81/live/0/jpeg.jpg")
+    sleep 500
+    @set('image', "http://dashuser:passw0rd@192.168.1.93:81/live/0/mjpeg.jpg")
+
+
+sleep = (ms) ->
+  start = new Date().getTime()
+  continue while new Date().getTime() - start < ms
