@@ -1,0 +1,60 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #266679;
+
+$title-color: white; 
+$date-color: darkgrey; 
+$time-color: lightgrey;
+
+// ----------------------------------------------------------------------------
+// Widget-text styles
+// ----------------------------------------------------------------------------
+.widget-music {
+
+    .title {
+        font-size: 1.2em;
+        top: 12px;
+        left: 0;
+        right: 0;
+        position: absolute;
+    }
+
+    .artist {
+        vertical-align: bottom;
+        color: slategrey;
+        font-size: 20px;
+    }
+
+    .song {
+        vertical-align: bottom;
+        font-size: 24px;
+    }
+
+  background-color: $background-color;
+
+
+  .container {
+    display: flex;
+  }
+
+  .leftside {
+    flex: 0.23;
+    padding-left: 25px;
+  }
+
+
+  .rightside {
+    flex: 0.77;
+    text-align: left;
+    padding-top: 120px;
+    padding-left: 25px;
+  }
+
+  .title {
+    color: $title-color;
+    font-size: 40px;   
+    padding-top: 4px;
+  }
+
+}

@@ -25,7 +25,7 @@ background-color: #266679;
      }
 
      .amber {
-       background-color: #ff9933;
+       background-color: #ffa64d;
      }
 
     .green {
@@ -93,9 +93,10 @@ background-color: #266679;
     margin-bottom: 12px;
     font-size: 20px; }
   .widget-traffic .drive-time {
-    color: rgba(255, 255, 255, 0.7); }
+//    color: rgba(255, 255, 255, 0.7); }
+    color: slategrey; }
   .drive-destination, .drive-time, .drive-distance {
-    font-size: 16px;
+    font-size: 21px;
   }
   .widget-traffic .drive-road {
     position: relative;

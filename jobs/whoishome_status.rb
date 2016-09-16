@@ -31,6 +31,7 @@ ping_count = 2 #10
 servers = [
     {name: 'david', label: 'David', url: '192.168.1.67', method: 'ping'},
     {name: 'chrissie', label: 'Chrissie', url: '192.168.1.65', method: 'ping'},
+    {name: 'mumb', label: 'Grandma', url: '192.168.1.91', method: 'ping'},
 ]
  
 SCHEDULER.every '1m', :first_in => 0 do |job|
