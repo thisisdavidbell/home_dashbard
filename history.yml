@@ -27,13 +27,13 @@ sss-brokenserver: |+
   data: {"result":0,"id":"sss-brokenserver","updatedAt":1473435581}
 
 sss-livingroomcamera: |+
-  data: {"result":1,"id":"sss-livingroomcamera","updatedAt":1474104459}
+  data: {"result":1,"id":"sss-livingroomcamera","updatedAt":1474107822}
 
 sss-frontdoorcamera: |+
-  data: {"result":1,"id":"sss-frontdoorcamera","updatedAt":1474104509}
+  data: {"result":1,"id":"sss-frontdoorcamera","updatedAt":1474107813}
 
 sss-cinemaroommac: |+
-  data: {"result":1,"id":"sss-cinemaroommac","updatedAt":1474104468}
+  data: {"result":1,"id":"sss-cinemaroommac","updatedAt":1474107825}
 
 verbinski: |+
   data: {"current":{"temperature":19,"summary":"Partly Cloudy","humidity":"78&#37;","wind_speed":20,"wind_bearing":206,"icon":"partly-cloudy-day"},"today":{"summary":"Rain starting tomorrow morning, continuing until tomorrow afternoon.","high":20,"low":14,"sunrise":"6:33 am","sunset":"7:34 pm","icon":"partly-cloudy-day"},"upcoming_week":[{"max_temp":19,"min_temp":13,"time":"Sat","icon":"rain"},{"max_temp":19,"min_temp":10,"time":"Sun","icon":"partly-cloudy-day"},{"max_temp":24,"min_temp":15,"time":"Mon","icon":"clear-day"},{"max_temp":26,"min_temp":17,"time":"Tue","icon":"partly-cloudy-night"},{"max_temp":24,"min_temp":14,"time":"Wed","icon":"rain"},{"max_temp":20,"min_temp":13,"time":"Thu","icon":"rain"},{"max_temp":20,"min_temp":12,"time":"Fri","icon":"rain"}],"id":"verbinski","updatedAt":1473443577}
@@ -57,7 +57,7 @@ server_status: |+
   data: {"items":[{"label":"vmwtpm093r Dashing","value":0,"arrow":"icon-warning-sign","color":"red"},{"label":"Bluemix Dashing","value":0,"arrow":"icon-warning-sign","color":"red"},{"label":"Jazz802","value":1,"arrow":"icon-ok-sign","color":"green"},{"label":"vhost04","value":0,"arrow":"icon-warning-sign","color":"red"}],"id":"server_status","updatedAt":1473770725}
 
 device-status: |+
-  data: {"servers":[{"simple_name":"Front Door Camera","up":1},{"simple_name":"Living Room Camera","up":1},{"simple_name":"Ethernet Over Power","up":1}],"id":"device-status","updatedAt":1474104468}
+  data: {"servers":[{"simple_name":"Front Door Camera","up":1},{"simple_name":"Living Room Camera","up":1},{"simple_name":"Ethernet Over Power","up":1}],"id":"device-status","updatedAt":1474107825}
 
 Front Dor Camera: |+
   data: {"result":0,"id":"Front Dor Camera","updatedAt":1473771922}
@@ -69,10 +69,10 @@ whoishome-status: |+
   data: {"servers":[{"simple_name":"David","up":0},{"simple_name":"Chrissie","up":0}],"id":"whoishome-status","updatedAt":1473774868}
 
 whoishome: |+
-  data: {"servers":[{"simple_name":"David","up":0},{"simple_name":"Chrissie","up":1},{"simple_name":"Grandma","up":0}],"id":"whoishome","updatedAt":1474104466}
+  data: {"servers":[{"simple_name":"David","up":1},{"simple_name":"Chrissie","up":1},{"simple_name":"Grandma","up":0}],"id":"whoishome","updatedAt":1474107820}
 
 tomtom: |+
-  data: {"results":[{"name":"IBM (back route)","time":"25 mins","road":"","distance":10.4,"red":false,"amber":true,"green":false},{"name":"IBM (motorway)","time":"26 mins","road":"2 min delay","distance":13.8,"red":true,"amber":false,"green":false},{"name":"Harefield","time":"13 mins","road":"","distance":3.6,"red":false,"amber":false,"green":true},{"name":"Gatcombe Gdns","time":"12 mins","road":"","distance":3.2,"red":false,"amber":false,"green":true}],"id":"tomtom","updatedAt":1474104457}
+  data: {"results":[{"name":"IBM (back route)","time":"25 mins","road":"","distance":10.4,"red":false,"amber":true,"green":false},{"name":"IBM (motorway)","time":"27 mins","road":"3 min delay","distance":13.8,"red":true,"amber":false,"green":false},{"name":"Harefield","time":"14 mins","road":"","distance":3.6,"red":false,"amber":true,"green":false},{"name":"Gatcombe Gdns","time":"12 mins","road":"","distance":3.2,"red":false,"amber":false,"green":true}],"id":"tomtom","updatedAt":1474107760}
 
 camera: |+
   data: {"image":"http://4.bp.blogspot.com/-tjMYWRYVIvg/UrCQf3JDpTI/AAAAAAAAGNI/g8IbqLIPBtY/s1600/loadingeffect2.png","id":"camera","updatedAt":1473971014}
@@ -81,5 +81,5 @@ pagetitle: |+
   data: {"title":" The Bell Home Dashboard ","id":"pagetitle","updatedAt":1474064781}
 
 spotify: |+
-  data: {"song":" My Way ","artist":" Calvin Harris ","image":" http://images.spotify.com/image/05b9dd3a7188548a502a3066cacfb1e4419c6823 ","id":"spotify","updatedAt":1474104501}
+  data: {"song":" Ex's & Oh's ","artist":" Elle King ","image":" http://images.spotify.com/image/47bf995adcbcc016d6d19ac06ee6aefd2f76982f ","id":"spotify","updatedAt":1474107824}
 
