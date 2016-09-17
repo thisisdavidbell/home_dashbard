@@ -54,6 +54,10 @@ end displayTrackName
 -- Method to send currently playing song using curl
 
 on sendCurrentlyPlaying(currentSong, currentArtist, currentID)
-	do shell script "curl -m 3 -d '{ \"auth_token\": \"YOUR_AUTH_TOKEN\",  \"song\": \" " & currentSong & " \", \"artist\": \" " & currentArtist & " \", \"image\": \" " & currentID & " \" }' http://192.168.1.68:3030/widgets/spotify"
+	"hello"
+--	set thestring to "{ \"auth_token\": \"YOUR_AUTH_TOKEN\",  \"song\": \" " & currentSong & " \", \"artist\": \" " & currentArtist & " \", \"image\": \" " & currentID & " \" }"
+--	thestring
+	do shell script " curl -m 3 -d \"{ \\\"auth_token\\\": \\\"YOUR_AUTH_TOKEN\\\", \\\"song\\\": \\\" " & currentSong & " \\\", \\\"artist\\\": \\\" " & currentArtist & " \\\", \\\"image\\\": \\\" " & currentID & " \\\" }\" http://192.168.1.68:3030/widgets/spotify "
+	--do shell script "curl -m 3 -d \" & thestring & http://192.168.1.68:3030/widgets/spotify"
 	--	do shell script "curl -m 3 -d '{ \"auth_token\": \"YOUR_AUTH_TOKEN\",  \"artist\": \" " & currentArtist & " \" }' http://192.168.1.68:3030/widgets/spotify"
 end sendCurrentlyPlaying
