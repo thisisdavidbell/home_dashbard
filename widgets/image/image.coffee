@@ -2,7 +2,7 @@ class Dashing.Image extends Dashing.Widget
 
   ready: ->
 # This is fired when the widget is done being rendered
-    setInterval(@startTime, 10000)
+    setInterval(@startTime, 5000)
 
   startTime: =>
  #   @set('image', "http://sawadacoffee.com/wp-content/uploads/Sawada-Coffee-10DEC2015-003.jpg")
