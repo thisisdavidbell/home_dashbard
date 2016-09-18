@@ -1,0 +1,85 @@
+---
+buzzwords: |+
+  data: {"items":[{"label":"Paradigm shift","value":22},{"label":"Enterprise","value":19},{"label":"Turn-key","value":15},{"label":"Exit strategy","value":3},{"label":"Leverage","value":15},{"label":"Synergy","value":11},{"label":"Web 2.0","value":11},{"label":"Pivoting","value":3},{"label":"Streamlininess","value":24}],"id":"buzzwords","updatedAt":1474059377}
+
+convergence: |+
+  data: {"points":[{"x":43414,"y":7},{"x":43415,"y":4},{"x":43416,"y":7},{"x":43417,"y":24},{"x":43418,"y":34},{"x":43419,"y":6},{"x":43420,"y":40},{"x":43421,"y":37},{"x":43422,"y":43},{"x":43423,"y":42}],"id":"convergence","updatedAt":1474059377}
+
+valuation: |+
+  data: {"current":87,"last":59,"id":"valuation","updatedAt":1474059377}
+
+karma: |+
+  data: {"current":151319,"last":22835,"id":"karma","updatedAt":1474059377}
+
+synergy: |+
+  data: {"value":35,"id":"synergy","updatedAt":1474059377}
+
+sss-gateway: |+
+  data: {"result":0,"id":"sss-gateway","updatedAt":1473435612}
+
+sss-reddit: |+
+  data: {"result":0,"id":"sss-reddit","updatedAt":1473435614}
+
+sss-github: |+
+  data: {"result":1,"id":"sss-github","updatedAt":1473435561}
+
+sss-brokenserver: |+
+  data: {"result":0,"id":"sss-brokenserver","updatedAt":1473435581}
+
+sss-livingroomcamera: |+
+  data: {"result":1,"id":"sss-livingroomcamera","updatedAt":1474216538}
+
+sss-frontdoorcamera: |+
+  data: {"result":1,"id":"sss-frontdoorcamera","updatedAt":1474216529}
+
+sss-cinemaroommac: |+
+  data: {"result":1,"id":"sss-cinemaroommac","updatedAt":1474216547}
+
+verbinski: |+
+  data: {"current":{"temperature":19,"summary":"Partly Cloudy","humidity":"78&#37;","wind_speed":20,"wind_bearing":206,"icon":"partly-cloudy-day"},"today":{"summary":"Rain starting tomorrow morning, continuing until tomorrow afternoon.","high":20,"low":14,"sunrise":"6:33 am","sunset":"7:34 pm","icon":"partly-cloudy-day"},"upcoming_week":[{"max_temp":19,"min_temp":13,"time":"Sat","icon":"rain"},{"max_temp":19,"min_temp":10,"time":"Sun","icon":"partly-cloudy-day"},{"max_temp":24,"min_temp":15,"time":"Mon","icon":"clear-day"},{"max_temp":26,"min_temp":17,"time":"Tue","icon":"partly-cloudy-night"},{"max_temp":24,"min_temp":14,"time":"Wed","icon":"rain"},{"max_temp":20,"min_temp":13,"time":"Thu","icon":"rain"},{"max_temp":20,"min_temp":12,"time":"Fri","icon":"rain"}],"id":"verbinski","updatedAt":1473443577}
+
+camera1: |+
+  data: {"image":"/cameras/snapshot1_new.jpeg","id":"camera1","updatedAt":1473877716}
+
+welcome: |+
+  data: {"title":"Hey, Look what I can do!","id":"welcome","updatedAt":1473702923}
+
+picture: |+
+  data: {"image":"http://192.168.1.93:81/live/0/mjpeg.jpg","id":"picture","updatedAt":1473717457}
+
+anotherid: |+
+  data: {"title":"Hey, Look what I can do!","id":"anotherid","updatedAt":1473703731}
+
+aheader: |+
+  data: {"headerValue":"changed22-header","id":"aheader","updatedAt":1473706772}
+
+server_status: |+
+  data: {"items":[{"label":"vmwtpm093r Dashing","value":0,"arrow":"icon-warning-sign","color":"red"},{"label":"Bluemix Dashing","value":0,"arrow":"icon-warning-sign","color":"red"},{"label":"Jazz802","value":1,"arrow":"icon-ok-sign","color":"green"},{"label":"vhost04","value":0,"arrow":"icon-warning-sign","color":"red"}],"id":"server_status","updatedAt":1473770725}
+
+device-status: |+
+  data: {"servers":[{"simple_name":"Front Door Camera","up":1},{"simple_name":"Living Room Camera","up":1},{"simple_name":"Ethernet Over Power","up":1}],"id":"device-status","updatedAt":1474216547}
+
+Front Dor Camera: |+
+  data: {"result":0,"id":"Front Dor Camera","updatedAt":1473771922}
+
+Living Room Camera: |+
+  data: {"result":0,"id":"Living Room Camera","updatedAt":1473771898}
+
+whoishome-status: |+
+  data: {"servers":[{"simple_name":"David","up":0},{"simple_name":"Chrissie","up":0}],"id":"whoishome-status","updatedAt":1473774868}
+
+whoishome: |+
+  data: {"servers":[{"simple_name":"David","up":1},{"simple_name":"Chrissie","up":1},{"simple_name":"Grandma","up":0}],"id":"whoishome","updatedAt":1474216534}
+
+tomtom: |+
+  data: {"results":[{"name":"IBM (back route)","time":"25 mins","road":"","distance":10.4,"red":false,"amber":true,"green":false},{"name":"IBM (motorway)","time":"30 mins","road":"3 min delay","distance":12.8,"red":true,"amber":false,"green":false},{"name":"Harefield","time":"13 mins","road":"","distance":3.6,"red":false,"amber":false,"green":true},{"name":"Gatcombe Gdns","time":"12 mins","road":"","distance":3.2,"red":false,"amber":false,"green":true}],"id":"tomtom","updatedAt":1474216476}
+
+camera: |+
+  data: {"image":"http://4.bp.blogspot.com/-tjMYWRYVIvg/UrCQf3JDpTI/AAAAAAAAGNI/g8IbqLIPBtY/s1600/loadingeffect2.png","id":"camera","updatedAt":1473971014}
+
+pagetitle: |+
+  data: {"title":" The Bell Home Dashboard ","id":"pagetitle","updatedAt":1474064781}
+
+spotify: |+
+  data: {"song":" Alan Turing's Legacy ","artist":" Alexandre Desplat ","image":" http://images.spotify.com/image/a761c36ee951a3f3625158433877bbff9260bfe8 ","id":"spotify","updatedAt":1474216549}
+
