@@ -73,5 +73,5 @@ end getCoverArt
 -- Method to send currently playing song using curl
 
 on sendCurrentlyPlaying(currentSong, currentState, currentArtist, currentCoverArt)
-	do shell script " curl -m 3 -d \"{ \\\"auth_token\\\": \\\"YOUR_AUTH_TOKEN\\\", \\\"song\\\": \\\" " & currentSong & " \\\", \\\"state\\\": \\\" " & currentState & " \\\", \\\"artist\\\": \\\" " & currentArtist & " \\\", \\\"image\\\": \\\" " & currentCoverArt & " \\\" }\" http://192.168.1.68:3030/widgets/spotify > /dev/null 2>&1 &"
+	do shell script " curl -m 3 -d \"{ \\\"auth_token\\\": \\\"YOUR_AUTH_TOKEN\\\", \\\"song\\\": \\\" " & currentSong & " \\\", \\\"state\\\": \\\" " & currentState & " \\\", \\\"artist\\\": \\\" " & currentArtist & " \\\", \\\"image\\\": \\\" " & currentCoverArt & " \\\" }\" http://192.168.1.80:3030/widgets/spotify > /dev/null 2>&1 &"
 end sendCurrentlyPlaying
