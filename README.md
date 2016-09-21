@@ -15,6 +15,7 @@ INSTALL
  - run: node express-app.js
  - clone repo https://github.com/thisisdavidbell/home_dashboard
  - cd home_dashboard
+ - test that spotify.scpt works correctly. If not recompile with Script Editor.
  - run: dashing start
  - dashboard now at: http://<ipaddress>:3030/homedash
 
