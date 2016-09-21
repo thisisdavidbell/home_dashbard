@@ -3,24 +3,23 @@ Dashboard for home status
 
 This page contains Dashing code, plus numerous plugins for dashing, and my own configuration and changes.
 
+INSTALL
+ - install Xcode from app store
+ - install dev tools: xcode-select --install
+ - run: sudo gem install bundler
+ - install dashing following instructions on http://dashing.io
+ - install node-mjpeg-proxy, repo: https://github.com/legege/node-mjpeg-proxy
+ - cd node-mjpeg-proxy
+ - npm install
+ - config example/express-app.js to point cam2/image2 to front door camera mjepg url
+ - run: node express-app.js
+ - clone repo https://github.com/thisisdavidbell/home_dashboard
+ - cd home_dashboard
+ - run: dashing start
+ - dashboard now at: http://<ipaddress>:3030/homedash
 
 NOTES
 
-SCSS
-in priority order, starting with the highest priority
- - div referring to super class, which is in assets/stylesheets/<name>.scss
-    e.g.: in dashhome.erb <div class="gridster dashhome" >
 
- - class specified in the div in the erb, which matches class def in <widget>.scss
-  e.g.
-       homedash.erb:
-       <div> .... class="home-header" </div>
-       header.scss:
-       .home-header {
-          background: red;
-       }
- - widget type class specified in <widget>.scss as widget-<widgettype> 
-  e.g. header.scss
-      .widget-header {
-          background: red;
-       }  
+
+- see dashing readme for previous contentx
