@@ -1,22 +1,22 @@
 ---
 spotify: |+
-  data: {"song":" Sit Still, Look Pretty ","state":" Paused ","artist":" Daya ","image":" http://images.spotify.com/image/2ceb40188f5df05a51de5bef0801e1cb449e275f ","id":"spotify","updatedAt":1474223206}
+  data: {"song":" Come First ","state":" Playing ","artist":" Terror Jr ","image":" http://images.spotify.com/image/2d1df9899edfb027fbbfeae5e1b26128d0f04818 ","id":"spotify","updatedAt":1474475574}
 
 sss-frontdoorcamera: |+
-  data: {"result":1,"id":"sss-frontdoorcamera","updatedAt":1474223196}
+  data: {"result":1,"id":"sss-frontdoorcamera","updatedAt":1474475533}
 
 tomtom: |+
-  data: {"results":[{"name":"IBM (back route)","time":"24 mins","road":"","distance":10.4,"red":false,"amber":false,"green":true},{"name":"IBM (motorway)","time":"27 mins","road":"3 min delay","distance":13.8,"red":true,"amber":false,"green":false},{"name":"Harefield","time":"12 mins","road":"","distance":3.6,"red":false,"amber":false,"green":true},{"name":"Gatcombe Gdns","time":"11 mins","road":"","distance":3.2,"red":false,"amber":false,"green":true}],"id":"tomtom","updatedAt":1474223143}
+  data: {"results":[{"name":"IBM (back route)","time":"26 mins","road":"","distance":10.4,"red":false,"amber":true,"green":false},{"name":"IBM (motorway)","time":"25 mins","road":"1 sec delay","distance":13.8,"red":false,"amber":true,"green":false},{"name":"Harefield","time":"17 mins","road":"1 min delay","distance":3.6,"red":true,"amber":false,"green":false},{"name":"Gatcombe Gdns","time":"19 mins","road":"2 min delay","distance":4.6,"red":true,"amber":false,"green":false}],"id":"tomtom","updatedAt":1474475180}
 
 whoishome: |+
-  data: {"servers":[{"simple_name":"David","up":1},{"simple_name":"Chrissie","up":1},{"simple_name":"Grandma","up":0}],"id":"whoishome","updatedAt":1474223201}
+  data: {"servers":[{"simple_name":"David","up":1},{"simple_name":"Chrissie","up":0},{"simple_name":"Grandma","up":0}],"id":"whoishome","updatedAt":1474475549}
 
 sss-livingroomcamera: |+
-  data: {"result":1,"id":"sss-livingroomcamera","updatedAt":1474223205}
+  data: {"result":1,"id":"sss-livingroomcamera","updatedAt":1474475542}
 
 sss-cinemaroommac: |+
-  data: {"result":1,"id":"sss-cinemaroommac","updatedAt":1474223207}
+  data: {"result":1,"id":"sss-cinemaroommac","updatedAt":1474475551}
 
 device-status: |+
-  data: {"servers":[{"simple_name":"Front Door Camera","up":1},{"simple_name":"Living Room Camera","up":1},{"simple_name":"Ethernet Over Power","up":1}],"id":"device-status","updatedAt":1474223207}
+  data: {"servers":[{"simple_name":"Front Door Camera","up":1},{"simple_name":"Living Room Camera","up":1},{"simple_name":"Ethernet Over Power","up":1}],"id":"device-status","updatedAt":1474475551}
 
