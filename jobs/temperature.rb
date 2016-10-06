@@ -1,6 +1,8 @@
 rooms = []
 rooms << { name: "Nursery", idx: "5", dataid: 'nursery-temp' }
 rooms << { name: "Master", idx: "6", dataid: 'master-temp' }
+hot = 20
+cold = 16
 
 # jobs/market.rb
 SCHEDULER.every "10s", first_in: 0 do |job|
@@ -44,7 +46,12 @@ SCHEDULER.every "10s", first_in: 0 do |job|
 #    puts data
     displayValue = "#{room[:name]} #{temp_array.last['te']} C";
   
-    send_event(room[:dataid], points: data, min:12, max:28, renderer: 'area', colors:'grey', displayedValue: displayValue)
+    currtemp = temp_array.last['te']
+    toohot =  currtemp >= hot
+    toocold = currtemp <= cold
+    justright = currtemp > cold && currtemp < hot
+
+    send_event(room[:dataid], points: data, min:12, max:28, renderer: 'area', colors:'grey', displayedValue: displayValue, red: toohot, green: justright, blue: toocold)
 
   end
 

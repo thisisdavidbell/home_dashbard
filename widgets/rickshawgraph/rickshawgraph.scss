@@ -26,8 +26,23 @@ $tick-color:        rgba(0, 0, 0, 0.4);
 
   h2 {
     font-size: 30px;
-    font-weight: 300;
+    font-weight: 400;
     text-transform: none;
+  }
+
+  .green {
+    background-color: #96BF48;
+    padding-top: 1px;
+  }
+
+   .blue {
+    background-color: #4db8ff;
+    padding-top: 1px;
+  }
+
+   .red {
+    background-color: #BF4848;
+    padding-top: 1px;
   }
 
   svg {
