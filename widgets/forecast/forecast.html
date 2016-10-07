@@ -2,22 +2,27 @@
 <div class="updated-at" data-bind="updatedAtMessage"></div> -->
 <h1 class="title" data-bind="title"></h1>
 <div>
-        <span class="spacer"></span>
 	<h1 class="heading">RIGHT NOW</h1>
-	<canvas id="current_icon" class="forecast-icon" width="85px" height="85px"></canvas>
-  	<div class="temp" data-bind="current_temp | raw"></div>
-  	<div class="summary" data-bind="current_desc | raw"></div>
+	<div class='forecastdiv' data-addclass-green="current_green" data-addclass-blue="current_blue" data-addclass-red="current_red">
+  	  <canvas id="current_icon" class="forecast-icon" width="85px" height="85px"></canvas>
+  	  <div class="temp" data-bind="current_temp | raw"></div>
+  	  <div class="summary" data-bind="current_desc | raw"></div>
+    </div>
 </div>
 
 <div style="margin-top: 10px">
 	<h1 class="heading">NEXT HOUR</h1>
-	<canvas id="next_icon" class="forecast-icon" width="25px" height="25px"></canvas>
-	<div class="summary" data-bind="next_desc | raw"></div>
+	<div class='forecastdiv' data-addclass-green="next_green" data-addclass-blue="next_blue" data-addclass-red="next_red">
+    	<canvas id="next_icon" class="forecast-icon" width="25px" height="25px"></canvas>
+	    <div class="summary" data-bind="next_desc | raw"></div>
+    </div>
 </div>
 
 <div style="margin-top: 10px">
 	<h1 class="heading">LATER</h1>
-	<canvas id="later_icon" class="forecast-icon" width="25px" height="25px"></canvas>
-	<div class="summary" data-bind="later_desc | raw"></div>
+ 	  <div class='forecastdiv' data-addclass-green="later_green" data-addclass-blue="later_blue" data-addclass-red="later_red">	
+ 	    <canvas id="later_icon" class="forecast-icon" width="25px" height="25px"></canvas>
+	    <div class="summary" data-bind="later_desc | raw"></div>
+    </div>
 </div>
 <p class="updated-at" data-bind="updatedAtMessage"></p>
