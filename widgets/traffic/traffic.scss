@@ -14,8 +14,8 @@ background-color: #266679;
     }
 
     .route-div {
-        padding-top: 2%;
-        padding-bottom: 2%;
+    //    padding-top: 2%;
+    //    padding-bottom: 2%;
         margin-top: 4%;
         margin-bottom: 1%;
     }
@@ -94,8 +94,11 @@ background-color: #266679;
     font-size: 20px; }
   .widget-traffic .drive-time {
 //    color: rgba(255, 255, 255, 0.7); }
-    color: slategrey; }
-  .drive-destination, .drive-time, .drive-distance {
+    color: grey; }
+  .drive-destination {
+    font-size: 25px;
+  }
+  .drive-time, .drive-distance {
     font-size: 21px;
   }
   .widget-traffic .drive-road {
