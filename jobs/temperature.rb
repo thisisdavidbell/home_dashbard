@@ -51,10 +51,10 @@ SCHEDULER.every "10s", first_in: 0 do |job|
     toocold = currtemp <= cold
     justright = currtemp > cold && currtemp < hot
 
-    send_event(room[:dataid], points: data, min:12, max:28, renderer: 'area', colors:'grey', displayedValue: displayValue, red: toohot, green: justright, blue: toocold)
+    send_event(room[:dataid], points: data, min:15, max:25, renderer: 'area', colors:'grey', displayedValue: displayValue, red: toohot, green: justright, blue: toocold)
 
   end
-
+  send_event('temptile', nothing: 'this_sets_updated_at')
 #points = [{x:1, y: 20}, {x:2, y:15}, {x:3, y:25}]
 
 #print "points: "

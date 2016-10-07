@@ -1,12 +1,12 @@
 class Dashing.Forecast extends Dashing.Widget
 
   # Overrides Dashing.Widget method in dashing.coffee
-  @accessor 'updatedAtMessage', ->
-    if updatedAt = @get('updatedAt')
-      timestamp = new Date(updatedAt * 1000)
-      hours = timestamp.getHours()
-      minutes = ("0" + timestamp.getMinutes()).slice(-2)
-      "Updated at #{hours}:#{minutes}"
+#  @accessor 'updatedAtMessage', ->
+#    if updatedAt = @get('updatedAt')
+#      timestamp = new Date(updatedAt * 1000)
+#      hours = timestamp.getHours()
+#      minutes = ("0" + timestamp.getMinutes()).slice(-2)
+#      "Updated at #{hours}:#{minutes}"
 
   constructor: ->
     super
