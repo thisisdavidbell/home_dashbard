@@ -114,6 +114,8 @@ h3 {
 // ----------------------------------------------------------------------------
 .gridster {
   margin: 0px auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .icon-background {
