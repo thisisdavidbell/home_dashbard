@@ -15,8 +15,7 @@ $time-color: lightgrey;
     .title {
         font-size: 1.2em;
         top: 12px;
-        left: 0;
-        right: 0;
+        right: 95px;
         position: absolute;
     }
 
@@ -39,16 +38,16 @@ $time-color: lightgrey;
   }
 
   .leftside {
-    flex: 0.35;
+    flex: 0.48;
     padding-left: 25px;
+    padding-right: 10px
   }
 
 
   .rightside {
-    flex: 0.65;
+    flex: 0.52;
     text-align: left;
-//    padding-top: 170px;
-    padding-left: 25px;
+    align-self: flex-end;
   }
 
 }
