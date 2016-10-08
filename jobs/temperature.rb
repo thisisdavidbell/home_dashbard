@@ -2,7 +2,8 @@ require 'time'
 
 rooms = []
 rooms << { name: "Nursery", idx: "5", dataid: 'nursery-temp', desc: 'nursery' }
-rooms << { name: "Master", idx: "6", dataid: 'master-temp', desc: 'master' }
+rooms << { name: "Bedroom", idx: "6", dataid: 'master-temp', desc: 'master' }
+rooms << { name: "Lounge", idx: "6", dataid: 'lounge-temp', desc: 'master' }
 hot = 20
 cold = 16
 batteryChange = 5
@@ -63,6 +64,8 @@ SCHEDULER.every "10s", first_in: 0 do |job|
     
     displayValue = "#{room[:name]} #{temp_array.last['te']} C";
   
+    puts displayValue
+
     # determine temp colour
     currtemp = temp_array.last['te']
     toohot =  currtemp >= hot
