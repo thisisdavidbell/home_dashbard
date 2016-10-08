@@ -7,10 +7,10 @@ office_location = URI::encode('50.929588,-1.303068')
 key             = URI::encode('ewtq388cxgnu8uqfgbkabxks')
 locations       = []
 #locations << { name: "Sam2", location: URI::encode('-25.764803,28.34625') } # example location format
-locations << { name: "IBM (back route)", targettime: "25", redtime: "27", via: URI::encode('50.993645,-1.328241'), location: URI::encode('51.021931,-1.394223') }
-locations << { name: "IBM (motorway)", targettime: "24", redtime: "26", via: URI::encode('50.983058,-1.365861'), location: URI::encode('51.021931,-1.394223') }
-locations << { name: "Harefield", targettime: "14", redtime: "16", via: URI::encode('50.914903,-1.333551'), location: URI::encode('50.920739,-1.346909') }
-locations << { name: "Gatcombe Gdns", targettime: "13", redtime: "15", via: URI::encode('50.927199,-1.326009'), location: URI::encode('50.929479,-1.354186') }
+locations << { name: "IBM (back route)", targettime: "26", redtime: "30", via: URI::encode('50.993645,-1.328241'), location: URI::encode('51.021931,-1.394223') }
+locations << { name: "IBM (motorway)", targettime: "25", redtime: "29", via: URI::encode('50.983058,-1.365861'), location: URI::encode('51.021931,-1.394223') }
+locations << { name: "Harefield", targettime: "15", redtime: "20", via: URI::encode('50.914903,-1.333551'), location: URI::encode('50.920739,-1.346909') }
+locations << { name: "Gatcombe Gdns", targettime: "14", redtime: "18", via: URI::encode('50.927199,-1.326009'), location: URI::encode('50.929479,-1.354186') }
 
 SCHEDULER.every '10m', :first_in => '15s' do |job|
     routes = []
