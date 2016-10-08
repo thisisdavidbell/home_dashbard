@@ -1,8 +1,12 @@
+require 'time'
+
 rooms = []
 rooms << { name: "Nursery", idx: "5", dataid: 'nursery-temp', desc: 'nursery' }
 rooms << { name: "Master", idx: "6", dataid: 'master-temp', desc: 'master' }
 hot = 20
 cold = 16
+batteryChange = 5
+warningAppear = 120
 
 # jobs/market.rb
 SCHEDULER.every "10s", first_in: 0 do |job|
@@ -15,18 +19,29 @@ SCHEDULER.every "10s", first_in: 0 do |job|
 
   rooms.each do |room|
     idx = 0;
+    battery = 0;
+    lastUpdated = 0;
 # find idx from device description
         uri = URI.parse("http://192.168.1.80:8081/json.htm?type=devices&filter=temp&used=true&order=Name")
         http = Net::HTTP.new(uri.host, uri.port)
         request = Net::HTTP::Get.new(uri.request_uri)
         response = http.request(request)
-    devices_array = JSON.parse(response.body)['result']
+        jsonresponse = JSON.parse(response.body)
+    devices_array = jsonresponse['result']
     # puts devices_array
     devices_array.each do |device|
       if device['Description'] == room[:desc]
         idx = device['idx']
+        battery = device['BatteryLevel']
+        lastUpdated = Time.parse(device['LastUpdate']).to_i
       end
     end
+
+    # calculate time since last update
+    actualTime = jsonresponse['ActTime']
+    timeSinceLastUpdate = actualTime - lastUpdated
+
+    hide_warning = timeSinceLastUpdate < warningAppear
 
 # get temp for device from idx
         uri = URI.parse("http://192.168.1.80:8081/json.htm?type=graph&sensor=temp&idx=#{idx}&range=day")
@@ -43,14 +58,18 @@ SCHEDULER.every "10s", first_in: 0 do |job|
         data << { x: it, y: temp_array[it]['te'] }
     end
 
+    # should we display the battery icon?
+    hide_battery = battery > batteryChange;
+    
     displayValue = "#{room[:name]} #{temp_array.last['te']} C";
   
+    # determine temp colour
     currtemp = temp_array.last['te']
     toohot =  currtemp >= hot
     toocold = currtemp <= cold
     justright = currtemp > cold && currtemp < hot
 
-    send_event(room[:dataid], points: data, min:15, max:25, renderer: 'area', colors:'grey', displayedValue: displayValue, red: toohot, green: justright, blue: toocold)
+    send_event(room[:dataid], points: data, min:15, max:25, renderer: 'area', colors:'grey', displayedValue: displayValue, red: toohot, green: justright, blue: toocold, hideBattery: hide_battery, hideWarning: hide_warning)
 
   end
   send_event('temptile', nothing: 'this_sets_updated_at')

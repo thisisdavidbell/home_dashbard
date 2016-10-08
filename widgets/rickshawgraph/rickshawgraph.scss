@@ -45,6 +45,18 @@ $tick-color:        rgba(0, 0, 0, 0.4);
     padding-top: 1px;
   }
 
+  .battery {
+    float: right;
+  }
+
+  .hideme {
+    display: none;
+  }
+  
+  .warning {
+    float: right;
+  }
+
   svg {
     position: absolute;
     left: 0px;
