@@ -1,6 +1,6 @@
 rooms = []
-rooms << { name: "Nursery", idx: "5", dataid: 'nursery-temp' }
-rooms << { name: "Master", idx: "6", dataid: 'master-temp' }
+rooms << { name: "Nursery", idx: "5", dataid: 'nursery-temp', desc: 'nursery' }
+rooms << { name: "Master", idx: "6", dataid: 'master-temp', desc: 'master' }
 hot = 20
 cold = 16
 
@@ -14,36 +14,35 @@ SCHEDULER.every "10s", first_in: 0 do |job|
 #  send_event(:market_value, points: data)
 
   rooms.each do |room|
-        uri = URI.parse("http://192.168.1.80:8081/json.htm?type=graph&sensor=temp&idx=#{room[:idx]}&range=day")
+    idx = 0;
+# find idx from device description
+        uri = URI.parse("http://192.168.1.80:8081/json.htm?type=devices&filter=temp&used=true&order=Name")
         http = Net::HTTP.new(uri.host, uri.port)
-   #     http.use_ssl = true
-   #     http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+        request = Net::HTTP::Get.new(uri.request_uri)
+        response = http.request(request)
+    devices_array = JSON.parse(response.body)['result']
+    # puts devices_array
+    devices_array.each do |device|
+      if device['Description'] == room[:desc]
+        idx = device['idx']
+      end
+    end
 
+# get temp for device from idx
+        uri = URI.parse("http://192.168.1.80:8081/json.htm?type=graph&sensor=temp&idx=#{idx}&range=day")
+        http = Net::HTTP.new(uri.host, uri.port)
         request = Net::HTTP::Get.new(uri.request_uri)
         response = http.request(request)
     temp_array = JSON.parse(response.body)['result']
     array_length = temp_array.length
     data = []
 
- #   print "last element: "
- #   puts temp_array.last
-
-#    print "array length: "
-#    output = array_length
-#    puts output
-
-#    print "start: "
     start = (array_length % 4) - 1
-#    output = start
-#    puts output
 
     (start..(array_length-1)).step(4) do |it| 
-#        puts it
-#        puts temp_array[it]['te']
         data << { x: it, y: temp_array[it]['te'] }
     end
 
-#    puts data
     displayValue = "#{room[:name]} #{temp_array.last['te']} C";
   
     currtemp = temp_array.last['te']
