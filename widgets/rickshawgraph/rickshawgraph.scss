@@ -30,20 +30,37 @@ $tick-color:        rgba(0, 0, 0, 0.4);
     text-transform: none;
   }
 
-  .green {
+//red
+   .hot {
+    background-color: #BF4848;
+    padding-top: 1px;
+  }
+//orange
+   .warm {
+    background-color: #EDA659;
+    padding-top: 1px;
+  }
+
+//green
+   .justright {
     background-color: #96BF48;
     padding-top: 1px;
   }
 
-   .blue {
+
+//blue
+   .cool {
     background-color: #4db8ff;
     padding-top: 1px;
   }
 
-   .red {
-    background-color: #BF4848;
+//turquoise
+   .cold {
+    background-color: #6FEFEB;
     padding-top: 1px;
   }
+  
+
 
   .battery {
     float: right;

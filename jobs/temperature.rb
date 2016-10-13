@@ -4,10 +4,12 @@ rooms = []
 rooms << { name: "Nursery", idx: "5", dataid: 'nursery-temp', desc: 'nursery' }
 rooms << { name: "Bedroom", idx: "6", dataid: 'master-temp', desc: 'master' }
 rooms << { name: "Lounge", idx: "6", dataid: 'lounge-temp', desc: 'lounge' }
-hot = 20
-cold = 16
-batteryChange = 5
-warningAppear = 120
+hotLimit = 23
+warmLimit = 21
+coolLimit = 19
+coldLimit = 17
+batteryChange = 5 # battery at 5 %
+warningAppear = 120 # 120 seconds without an update from sensor
 
 # jobs/market.rb
 SCHEDULER.every "10s", first_in: 0 do |job|
@@ -66,11 +68,14 @@ SCHEDULER.every "10s", first_in: 0 do |job|
   
     # determine temp colour
     currtemp = temp_array.last['te']
-    toohot =  currtemp >= hot
-    toocold = currtemp <= cold
-    justright = currtemp > cold && currtemp < hot
 
-    send_event(room[:dataid], points: data, min:12, max:24, renderer: 'area', colors:'grey', displayedValue: displayValue, red: toohot, green: justright, blue: toocold, hideBattery: hide_battery, hideWarning: hide_warning)
+    hot =  currtemp >= hotLimit
+    warm = currtemp >= warmLimit && currtemp < hotLimit
+    justright = currtemp > coolLimit && currtemp < warmLimit
+    cool = currtemp > coldLimit && currtemp <= coolLimit
+    cold = currtemp <= coldLimit
+
+    send_event(room[:dataid], points: data, min:12, max:24, renderer: 'area', colors:'grey', displayedValue: displayValue, hot: hot, warm: warm, justright: justright, cool: cool, cold: cold, hideBattery: hide_battery, hideWarning: hide_warning)
 
   end
   send_event('temptile', nothing: 'this_sets_updated_at')
