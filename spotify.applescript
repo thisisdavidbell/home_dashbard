@@ -40,7 +40,7 @@ on getState()
 			return currentState
 		end tell
 	on error
-		set currentState to "Unknown"
+		set currentState to "Paused"
 	end try
 end getState
 
@@ -53,7 +53,7 @@ on getArtist()
 			return currentArtist
 		end tell
 	on error
-		set currentArtist to "Unknown"
+		set currentArtist to "John Legend"
 	end try
 end getArtist
 
@@ -66,7 +66,7 @@ on getCoverArt()
 			return coverArt
 		end tell
 	on error
-		set coverArt to "Unknown"
+		set coverArt to "http://i.scdn.co/image/b3d079a2e81e76d5f4f7f570a91a54a1f09dd93d"
 	end try
 end getCoverArt
 

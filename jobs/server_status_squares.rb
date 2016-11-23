@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require 'net/http'
 require 'uri'
- 
+
 #
 ### Global Config
 #
@@ -11,8 +11,8 @@ require 'uri'
 httptimeout = 60
 ping_count = 10
 
-# 
-# Check whether a server is Responding you can set a server to 
+#
+# Check whether a server is Responding you can set a server to
 # check via http request or ping
 #
 # Server Options
@@ -25,15 +25,15 @@ ping_count = 10
 #       => ping
 #
 # Notes:
-#   => If the server you're checking redirects (from http to https for example) 
+#   => If the server you're checking redirects (from http to https for example)
 #      the check will return false
 #
 servers = [
     {name: 'sss-frontdoorcamera', label: 'Front Door Camera', url: '192.168.1.93', method: 'ping'},
     {name: 'sss-livingroomcamera', label: 'Living Room Camera', url: '192.168.1.94', method: 'ping'},
-    {name: 'sss-cinemaroommac', label: 'Ethernet Over Power', url: '192.168.1.80', method: 'ping'},
+    {name: 'sss-cinemaroommac', label: 'Ethernet Over Power', url: '192.168.1.77', method: 'ping'},
 ]
- 
+
 SCHEDULER.every '1m', :first_in => 0 do |job|
     thedata = []
     servers.each do |server|
