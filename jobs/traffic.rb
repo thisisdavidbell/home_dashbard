@@ -10,8 +10,8 @@ locations       = []
 locations << { name: "IBM (back route)", targettime: "26", redtime: "30", via: URI::encode('50.993645,-1.328241'), location: URI::encode('51.021931,-1.394223') }
 locations << { name: "IBM (motorway)", targettime: "25", redtime: "29", via: URI::encode('50.983058,-1.365861'), location: URI::encode('51.021931,-1.394223') }
 locations << { name: "Harefield", targettime: "15", redtime: "20", via: URI::encode('50.914903,-1.333551'), location: URI::encode('50.920739,-1.346909') }
-locations << { name: "Gatcombe Gdns", targettime: "14", redtime: "18", via: URI::encode('50.927199,-1.326009'), location: URI::encode('50.929479,-1.354186') }
-
+#locations << { name: "Gatcombe Gdns", targettime: "14", redtime: "18", via: URI::encode('50.927199,-1.326009'), location: URI::encode('50.929479,-1.354186') }
+locations << { name: "Pr Anne Hospital", targettime: "23", redtime: "30", via: URI::encode('50.934836,-1.434885'), location: URI::encode('50.934971,-1.435207') }
 SCHEDULER.every '10m', :first_in => '15s' do |job|
     routes = []
 
@@ -26,6 +26,8 @@ SCHEDULER.every '10m', :first_in => '15s' do |job|
         response = http.request(request)
         routes << { name: location[:name], location: location[:location], targettime: location[:targettime], redtime: location[:redtime], route: JSON.parse(response.body)["routes"][0] }
     end
+#print "ROUTES after REST CALL"
+#puts routes
 
     # find winner
     if routes
@@ -38,11 +40,13 @@ SCHEDULER.every '10m', :first_in => '15s' do |job|
                 distance: meters_to_miles(r[:route]["summary"]["lengthInMeters"].to_i),
                 red: r[:redtime].to_i*60 < r[:route]["summary"]["travelTimeInSeconds"].to_i,
                 amber: (r[:targettime].to_i*60) <= r[:route]["summary"]["travelTimeInSeconds"].to_i && (r[:redtime].to_i*60) >= r[:route]["summary"]["travelTimeInSeconds"].to_i,
-                green: (r[:targettime].to_i*60) > r[:route]["summary"]["travelTimeInSeconds"].to_i 
+                green: (r[:targettime].to_i*60) > r[:route]["summary"]["travelTimeInSeconds"].to_i
             }
         end
     end
 
+#    print "ROUTES after PROCESSING"
+#    puts routes
     # send event
   send_event('tomtom', { results: routes } )
 end
@@ -75,5 +79,6 @@ def delay(delay_seconds)
 end
 
 def meters_to_miles(meters)
-    (meters / 1609.34).round(1)
-end    
+    miles = (meters / 1609.34).round(1)
+    "(#{miles} miles)"
+end

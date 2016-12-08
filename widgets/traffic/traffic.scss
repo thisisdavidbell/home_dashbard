@@ -1,8 +1,8 @@
 .p45-colour {
-//  background-color: #d71717; 
+//  background-color: #d71717;
 }
 .widget-traffic {
-//  background-color: #ec663c; 
+//  background-color: #ec663c;
 background-color: #266679;
 
     .title {
@@ -87,7 +87,7 @@ background-color: #266679;
   .widget-traffic ol {
     list-style-position: inside; }
   .widget-traffic li:first-child {
-//    font-weight: bold; 
+//    font-weight: bold;
    }
   .widget-traffic li {
     margin-bottom: 12px;
@@ -98,8 +98,13 @@ background-color: #266679;
   .drive-destination {
     font-size: 25px;
   }
-  .drive-time, .drive-distance {
+  .drive-time, {
     font-size: 21px;
+  }
+
+  .drive-distance {
+    font-size: 16px;
+    color: #cccccc;
   }
   .widget-traffic .drive-road {
     position: relative;
@@ -112,7 +117,7 @@ background-color: #266679;
     color: rgba(255, 255, 255, 0.7); }
 
 .purple {
- // background-color: #b91be0; 
+ // background-color: #b91be0;
  }
 
 
