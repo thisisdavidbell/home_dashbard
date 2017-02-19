@@ -29,7 +29,7 @@ ping_count = 10
 #      the check will return false
 #
 servers = [
-    {name: 'sss-frontdoorcamera', label: 'Front Door Camera', url: '192.168.1.93', method: 'ping'},
+    {name: 'sss-babycribcamera', label: 'Baby Crib Camera', url: '192.168.1.191', method: 'ping'},
     {name: 'sss-livingroomcamera', label: 'Living Room Camera', url: '192.168.1.94', method: 'ping'},
     {name: 'sss-cinemaroommac', label: 'Ethernet Over Power', url: '192.168.1.77', method: 'ping'},
 ]
