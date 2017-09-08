@@ -59,15 +59,15 @@ SCHEDULER.every "10s", first_in: 0 do |job|
 
     start = (array_length % 4) - 1
 
-    (start..(array_length-1)).step(4) do |it| 
+    (start..(array_length-1)).step(4) do |it|
         data << { x: it, y: temp_array[it]['te'] }
     end
 
     # should we display the battery icon?
     hide_battery = battery > batteryChange;
-    
+
     displayValue = "#{room[:name]} #{temp_array.last['te']} C";
-  
+
     # determine temp colour
     currtemp = temp_array.last['te']
 
@@ -77,7 +77,20 @@ SCHEDULER.every "10s", first_in: 0 do |job|
     cool = currtemp > coldLimit && currtemp <= coolLimit
     cold = currtemp <= coldLimit
 
-    send_event(room[:dataid], points: data, min:12, max:24, renderer: 'area', colors:'grey', displayedValue: displayValue, hot: hot, warm: warm, justright: justright, cool: cool, cold: cold, hideBattery: hide_battery, hideWarning: hide_warning)
+
+    # set colour for graph
+		color = "#96BF48"
+		if hot
+			color = "#BF4848"
+		elsif warm
+			color = "#EDA659"
+		elsif cool
+			color = "#4db8ff"
+		elsif cold
+			color = "#6FEFEB"
+		end
+
+    send_event(room[:dataid], points: data, min:12, max:24, renderer: 'area', colors: color, displayedValue: displayValue, hot: hot, warm: warm, justright: justright, cool: cool, cold: cold, hideBattery: hide_battery, hideWarning: hide_warning)
 
   end
   send_event('temptile', nothing: 'this_sets_updated_at')
