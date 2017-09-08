@@ -121,7 +121,7 @@ class Dashing.Rickshawgraph extends Dashing.Widget
 
     # Gross hacks. Let's fix this.
     width  = (Dashing.widget_base_dimensions[0] * $container.data("sizex")) + Dashing.widget_margins[0] * 2 * (($container.data("sizex") ? 1) - 1)
-    height = 15 + (Dashing.widget_base_dimensions[1] * $container.data("sizey")) + Dashing.widget_margins[1] * 2 * (($container.data("sizey") ? 1) - 1) 
+    height = 15 + (Dashing.widget_base_dimensions[1] * $container.data("sizey")) + Dashing.widget_margins[1] * 2 * (($container.data("sizey") ? 1) - 1)
 
     if @get("legend")
       # Shave 20px off the bottom of the graph for the legend

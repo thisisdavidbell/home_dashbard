@@ -4,6 +4,8 @@ rooms = []
 rooms << { name: "Nursery", idx: "5", dataid: 'nursery-temp', desc: 'nursery' }
 rooms << { name: "Bedroom", idx: "6", dataid: 'master-temp', desc: 'master' }
 rooms << { name: "Lounge", idx: "6", dataid: 'lounge-temp', desc: 'lounge' }
+rooms << { name: "Top Room", idx: "6", dataid: 'top-temp', desc: 'top' }
+
 hotLimit = 23
 warmLimit = 21
 coolLimit = 19

@@ -59,7 +59,7 @@ $tick-color:        rgba(0, 0, 0, 0.4);
     background-color: #6FEFEB;
     padding-top: 1px;
   }
-  
+
 
 
   .battery {
@@ -69,7 +69,7 @@ $tick-color:        rgba(0, 0, 0, 0.4);
   .hideme {
     display: none;
   }
-  
+
   .warning {
     float: right;
   }
@@ -83,7 +83,7 @@ $tick-color:        rgba(0, 0, 0, 0.4);
   .title, .value {
     position: relative;
     z-index: 99;
-    padding-top: 9px;
+//    padding-top: 9px;
   }
 
   .title {
@@ -104,7 +104,7 @@ $tick-color:        rgba(0, 0, 0, 0.4);
       font-size: 20px;
       color: $tick-color;
     //  opacity: 0.5;
-      opacity: 0;      
+      opacity: 0;
       padding-bottom: 3px;
     }
   }
