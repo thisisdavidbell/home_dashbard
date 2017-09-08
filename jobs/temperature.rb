@@ -90,7 +90,7 @@ SCHEDULER.every "10s", first_in: 0 do |job|
 			color = "#6FEFEB"
 		end
 
-    send_event(room[:dataid], points: data, min:7, max:27, renderer: 'area', colors: color, displayedValue: displayValue, hot: hot, warm: warm, justright: justright, cool: cool, cold: cold, hideBattery: hide_battery, hideWarning: hide_warning)
+    send_event(room[:dataid], points: data, min:12, max:26, renderer: 'area', colors: color, displayedValue: displayValue, hot: hot, warm: warm, justright: justright, cool: cool, cold: cold, hideBattery: hide_battery, hideWarning: hide_warning)
 
   end
   send_event('temptile', nothing: 'this_sets_updated_at')
