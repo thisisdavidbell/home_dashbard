@@ -1,10 +1,10 @@
 require 'time'
 
 rooms = []
+rooms << { name: "Top Room", idx: "6", dataid: 'top-temp', desc: 'top' }
 rooms << { name: "Nursery", idx: "5", dataid: 'nursery-temp', desc: 'nursery' }
 rooms << { name: "Bedroom", idx: "6", dataid: 'master-temp', desc: 'master' }
 rooms << { name: "Lounge", idx: "6", dataid: 'lounge-temp', desc: 'lounge' }
-rooms << { name: "Top Room", idx: "6", dataid: 'top-temp', desc: 'top' }
 
 hotLimit = 23
 warmLimit = 21
@@ -90,7 +90,7 @@ SCHEDULER.every "10s", first_in: 0 do |job|
 			color = "#6FEFEB"
 		end
 
-    send_event(room[:dataid], points: data, min:12, max:24, renderer: 'area', colors: color, displayedValue: displayValue, hot: hot, warm: warm, justright: justright, cool: cool, cold: cold, hideBattery: hide_battery, hideWarning: hide_warning)
+    send_event(room[:dataid], points: data, min:7, max:27, renderer: 'area', colors: color, displayedValue: displayValue, hot: hot, warm: warm, justright: justright, cool: cool, cold: cold, hideBattery: hide_battery, hideWarning: hide_warning)
 
   end
   send_event('temptile', nothing: 'this_sets_updated_at')
